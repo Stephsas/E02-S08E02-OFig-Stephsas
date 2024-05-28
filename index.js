@@ -12,6 +12,12 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+app.set('view engine', 'ejs');
+// Je vais dire à express où se situe mon dossier contenant mes vues
+// La valeur par défaut est `views`, ici je lui dit de regarder dans le dossier `app/views`
+app.set('views', 'app/views');
+
+
 // servir les fichiers statiques qui sont dans "integration"
 app.use(express.static('integration'));
 
