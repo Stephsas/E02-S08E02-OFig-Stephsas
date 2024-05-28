@@ -9,7 +9,7 @@ const mainController = {
       res.render('accueil', { figurines });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Erreur lors de la récupération des figurines');
+      res.status(500).send('ERREUR PAS DE FIGURINES');
     }
   },
 
@@ -26,7 +26,7 @@ const mainController = {
       res.render('article', { figurine });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Erreur lors de la récupération de la figurine');
+      res.status(500).send('ERREUR FIGURINE INCONNUE');
     }
   }
 };
