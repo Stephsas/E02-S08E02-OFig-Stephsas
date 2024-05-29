@@ -15,7 +15,7 @@ router.get('/article/:id', mainController.articlePage);
 // page favoris
 router.get('/bookmarks', bookmarksController.bookmarksPage );
 router.get('/bookmarks/add/:id', bookmarksController.addToBookmarks);
-
+router.get('/bookmarks/delete/:id', bookmarksController.removeFromBookmarks);
 
 // on exporte le router 
 module.exports = router;
