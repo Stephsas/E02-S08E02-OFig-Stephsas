@@ -12,9 +12,10 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+
+// on set le moteur de rendu
 app.set('view engine', 'ejs');
-// Je vais dire à express où se situe mon dossier contenant mes vues
-// La valeur par défaut est `views`, ici je lui dit de regarder dans le dossier `app/views`
+// Attention ! Pour set le dossier de vues, on doit utiliser un chemin relatif !
 app.set('views', 'app/views');
 
 
