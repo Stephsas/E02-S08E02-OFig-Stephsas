@@ -6,6 +6,7 @@ const mainController = {
   async homePage(req, res) {
     try {
       const figurines = await dataMapper.getAllFigurines();
+      // je passe les figurines à ma vue 
       res.render('accueil', { figurines });
     } catch (error) {
       console.error(error);
