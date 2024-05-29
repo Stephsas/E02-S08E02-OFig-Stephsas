@@ -4,16 +4,18 @@ const express = require('express');
 const mainController = require('./controllers/mainController');
 const bookmarksController = require('./controllers/bookmarksController');
 
-const router = express.Router();
 
+const router = express.Router();
 // page d'accueil
 router.get('/', mainController.homePage);
 
-// page article avec id
+// page article
 router.get('/article/:id', mainController.articlePage);
 
 // page favoris
-router.get('/bookmarks', bookmarksController.bookmarksPage);
+router.get('/bookmarks', bookmarksController.bookmarksPage );
+router.get('/bookmarks/add/:id', bookmarksController.addToBookmarks);
+
 
 // on exporte le router 
 module.exports = router;
